@@ -4,13 +4,16 @@ import string
 ## Random Password Generator
 # This class generates a random password based on specified criteria.
 class PasswordGenerator:
+
     # Parameters:
-    def __init__(self, max_length=25, use_uppercase=True, use_lowercase=True, use_numbers=True, use_special_chars=True, length=(range(8, 50))):
+    def __init__(self, max_length=25, use_uppercase=True, use_lowercase=True, use_numbers=True, use_special_chars=True, length= 12, min_length=8):
         self.max_length = max_length
         self.use_uppercase = use_uppercase
         self.use_numbers = use_numbers
         self.use_special_chars = use_special_chars
         self.use_lowercase = use_lowercase
+        self.length = length
+        self.min_length = min_length
 
     # Generate:
     def generate(self):
