@@ -17,20 +17,24 @@ class PasswordGenerator:
 
     # Generate:
     def generate(self):
-        characters = string.ascii_lowercase
+        # Build the character set based on selected options
+        characters = ""
+        if self.use_lowercase:
+            characters += string.ascii_lowercase
         if self.use_uppercase:
             characters += string.ascii_uppercase
         if self.use_numbers:
             characters += string.digits
         if self.use_special_chars:
             characters += string.punctuation
-        if self.length:
-            if isinstance(self.length, tuple):
-                self.length = random.randint(self.length[0], self.length[1])
-            elif isinstance(self.length, int):
-                if self.length < 8 or self.length > self.max_length:
-                    raise ValueError(f"Length must be between 8 and {self.max_length}.")
+        if not characters:
+            raise ValueError("At least one character type must be selected.")
 
-        password = ''.join(random.choice(characters) for _ in range(self.length))
-        return password
-    
+        # Validate length
+        if self.length < self.min_length:
+            raise ValueError(f"Password length must be at least {self.min_length}.")
+        if self.length > self.max_length:
+            raise ValueError(f"Password length must not exceed {self.max_length}.")
+
+        # Generate the password
+        return ''.join(random.choice(characters) for _ in range(self.length))
