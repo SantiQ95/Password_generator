@@ -94,4 +94,4 @@ MIT License
 ---
 
 **Author:** Santiago Quintanilla 
-**Repository:** [GitHub link
+**Repository:** [\[GitHub link](https://github.com/SantiQ95/Password_generator)
