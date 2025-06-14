@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+password_gen_env/
+env/
+venv/
+
+# VS Code settings
+.vscode/
+
+# Test and coverage outputs
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+coverage.xml
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+tests/__pycache__/test_generator.cpython-312-pytest-8.4.0.pyc
+tests/__pycache__/test_generator.cpython-312-pytest-8.4.0.pyc
+
+# .env files
+.env
