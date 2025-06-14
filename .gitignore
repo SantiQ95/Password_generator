@@ -36,3 +36,6 @@ Thumbs.db
 .ipynb_checkpoints/
 tests/__pycache__/test_generator.cpython-312-pytest-8.4.0.pyc
 tests/__pycache__/test_generator.cpython-312-pytest-8.4.0.pyc
+
+# .env files
+.env
